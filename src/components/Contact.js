@@ -120,10 +120,7 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        // 'service_wap089c',     // Replace with your actual Service ID
-        // 'template_k0rpi7m',    // Replace with your actual Template ID
-        // formRef.current,
-        // 'BLuqIdHtpYo1oTPHU'      // Replace with your actual Public Key
+
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
