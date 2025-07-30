@@ -117,21 +117,23 @@ const Contact = () => {
     setStatus({ show: false, type: '', message: '' });
 
     try {
-      const response = await fetch('https://portfolio-backend-hfwa.vercel.app/api/send-email', {
+      const response = await fetch('https://vercel-back-eight.vercel.app/api/send-email', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
+        mode: 'cors', // Explicitly set CORS mode
+        credentials: 'include', // Include credentials if needed
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.message || 'Failed to send message');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send message');
       }
 
+      const data = await response.json();
       setStatus({ show: true, type: 'success', message: data.message });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
