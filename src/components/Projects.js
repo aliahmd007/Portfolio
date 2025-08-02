@@ -6,7 +6,7 @@ import img2 from '../img/tik tack game.png';
 import img3 from '../img/wather app.png';
 import myweb from '../img/Portfolio.JPG';
 import Estore from '../img/E-store.jpg';
-
+import RegF from '../img/RegisterF.JPG';
 
 
 function Projects() {
@@ -24,6 +24,12 @@ function Projects() {
       description: 'Currency Converter App Convert one Currency to another eg. PKR to INR ',
       image: img1,
     },
+
+    {
+      title: 'Registration Form',
+      description: 'Registration Form Click and View The Image ',
+      image: RegF,
+    },
     
     {
       title: 'Wather App',
@@ -31,7 +37,7 @@ function Projects() {
       image: img3,
     },
     {
-      title: 'Tik Tack To ',
+      title: 'Tic Tac Toe',
       description: 'This is a game for two players ',
       image: img2,
     },
@@ -55,6 +61,7 @@ function Projects() {
   return (
     <Container className="mt-5">
       <h2 className="mb-4 text-primary">Projects</h2>
+      <h6>Click On Project Name And See The Image</h6>
       <Row>
         {projects.map((project, index) => (
           <Col key={index} md={6} className="mb-4">
