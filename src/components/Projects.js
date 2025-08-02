@@ -1,38 +1,12 @@
-// import { Container, Row, Col, Navbar, Nav, Form, Button, Card } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// function Projects() {
-//   const projects = [
-//     { title: 'Portfolio Website', description: 'A personal website built with React.' },
-//     { title: 'Task Manager', description: 'Manage daily tasks using React and Node.js.' },
-//   ];
-//   return (
-//     <Container className="mt-5">
-//       <h2 className="mb-4 text-primary">Projects</h2>
-//       <Row>
-//         {projects.map((project, index) => (
-//           <Col key={index} md={6} className="mb-4">
-//             <Card className="shadow-sm border-0 h-100">
-//               <Card.Body>
-//                 <Card.Title className="text-success">{project.title}</Card.Title>
-//                 <Card.Text className="text-muted">{project.description}</Card.Text>
-//               </Card.Body>
-//             </Card>
-//           </Col>
-//         ))}
-//       </Row>
-//     </Container>
-//   );
-// }
-
-// export default Projects;
-
 import { useState } from 'react';
-import { Container, Row, Col, Navbar, Nav, Form, Button, Card, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import img1 from '../img/currency converter.png';
 import img2 from '../img/tik tack game.png';
 import img3 from '../img/wather app.png';
 import myweb from '../img/Portfolio.JPG';
+import Estore from '../img/E-store.jpg';
+
 
 
 function Projects() {
@@ -43,7 +17,7 @@ function Projects() {
     {
       title: 'E-Commerace',
       description: 'A personal website ',
-      image:img1 ,
+      image:Estore ,
     },
     {
       title: 'Currency Converter App',
@@ -56,7 +30,6 @@ function Projects() {
       description: 'Wather App Using Weather API',
       image: img3,
     },
-    ,
     {
       title: 'Tik Tack To ',
       description: 'This is a game for two players ',
@@ -99,7 +72,7 @@ function Projects() {
         ))}
       </Row>
 
-      {/* Modal to show project details */}
+     
       <Modal show={showModal} onHide={handleClose} centered size="lg" style={{marginTop:'40px'}} >
         <Modal.Header closeButton>
           <Modal.Title>{selectedProject?.title}</Modal.Title>
@@ -113,6 +86,7 @@ function Projects() {
             
           />
           <h5>{selectedProject?.description}</h5>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Close</Button>

@@ -1,34 +1,10 @@
-// import { Container, Row, Col, Navbar, Nav, Form, Button, Card } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-// function Home() {
-//   return (
-//     <div className="bg-light py-5 text-center">
-//       <Container>
-//         <h1 className="display-4 fw-bold text-primary">Welcome to My Portfolio</h1>
-//         <p className="lead text-secondary">I am a passionate web developer</p>
-//       </Container>
-//     </div>
-//   );
-// }
-// export default Home;
-
-
-import React from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Card,
-} from 'react-bootstrap';
+import {Container,Row,Col,Card,} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imgself from '../img/Adobe Express - file.png';
 
 function Home() {
   return (
     <div className="bg-light text-dark min-vh-100">
-      {/* Hero Section */}
       <div className="py-5 text-center bg-white shadow-sm">
         <Container>
           <h1 className="display-4 fw-bold text-primary">Welcome to My Portfolio</h1>
@@ -39,13 +15,13 @@ function Home() {
         </Container>
       </div>
 
-      {/* About Brief */}
       <Container className="py-5">
         <Row className="align-items-center">
           <Col md={6}>
             <img
               src={imgself}
               style={{  maxHeight: '50vh', objectFit: 'contain', width: '100%', marginBottom:'20px'}}
+              alt='sabri'
              />
           </Col>
           <Col md={6}>
@@ -61,7 +37,7 @@ function Home() {
         </Row>
       </Container>
 
-      {/* What I Do Section */}
+
       <div className="bg-white py-5">
         <Container>
           <h2 className="text-center fw-bold mb-4">What I Do</h2>

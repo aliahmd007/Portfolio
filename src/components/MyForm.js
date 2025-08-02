@@ -1,16 +1,5 @@
-import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
-  Stack,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-  Textarea,
-} from "@chakra-ui/react";
+import {Flex, Box,FormControl,FormLabel,Input,Stack,Button,Heading, Text,useColorModeValue,
+  Textarea,} from "@chakra-ui/react";
 import { useState } from "react";
 
 export default function MyForm() {
